@@ -85,13 +85,6 @@ if(gridX &lt; 0 || gridY &lt; 0 || gridX &gt;= room_width/NODE_SIZE || gridY &gt
     hoverNode = global.map[gridX, gridY];
 }
 
-with(oConfirmButton) {
-    if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord(hotKey))){
-        other.selectedActor.state = "perform action";
-        instance_destroy();
-    }
-}
-
 if(instance_place(x, y, oButton)) {
     if(instance_place(x, y, oButton) == hoverButton) {
         buttonTimer += 1;

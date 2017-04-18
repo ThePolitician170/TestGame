@@ -281,12 +281,8 @@ switch(state) {
             } else {
                 blessed = 0;
             }
-            
-            movement_range(id);
-            
+             
             //Update Action Menu
-            
-            get_attack_range(id);
             
             oCursor.selectedActor = id;
             

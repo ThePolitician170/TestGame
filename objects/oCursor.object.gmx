@@ -104,13 +104,13 @@ if(instance_place(x, y, oButton)) {
     buttonTimer = 0;
 }
 
-with(oButton){
+/*with(oButton){
     if(keyboard_check_pressed(ord(hotKey))) {
         if(instance_exists(id)) {
             execute_button(oCursor.selectedActor, id);
         }
     }
-}
+}*/
 
 if(keyboard_check_pressed(vk_escape) &amp;&amp; selectedActor != noone) {
     if(selectedActor.state == "begin action") {
@@ -133,9 +133,9 @@ if(keyboard_check_pressed(vk_escape) &amp;&amp; selectedActor != noone) {
 }
 
 if(mouse_check_button_pressed(mb_left)) {
-    if(selectedActor != noone &amp;&amp; hoverButton != noone) {
+    /*if(selectedActor != noone &amp;&amp; hoverButton != noone) {
         execute_button(selectedActor, hoverButton);
-    }
+    }*/
     
     if(instance_place(x, y, oConfirmButton)) {
         selectedActor.state = "perform action";

@@ -2,10 +2,24 @@
 
 actor = argument0;
 
-range = actor.move;
+var node = global.map[actor.gridX, actor.gridY];
+var neighborsSize = ds_list_size(node.neighbors);
 
-actions = actor.actions;
+for(i=0; i < neighborsSize; i++) {
+    var tempNode = ds_list_find_value(node.neighbors, i);
+    
+    if(tempNode.occupant == noone && tempNode.passable) {
+        tempNode.color = c_red;
+    } else if(tempNode.occupant != noone && tempNode.occupant.army != actor.army) {
+        tempNode.attackNode = true;
+        tempNode.color = c_red;
+    }
+}
 
+//range = actor.move;
+//actions = actor.actions;
+
+/*
 with(oActor) {
     if(army != other.actor.army && state != "dead") {
         tempX = abs(gridX - other.actor.gridX);
@@ -17,9 +31,8 @@ with(oActor) {
             
         }
     
-    }
-    
-}
+    }  
+} */
 
 
 

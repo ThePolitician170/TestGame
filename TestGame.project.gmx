@@ -127,8 +127,9 @@
   <scripts name="scripts">
     <scripts name="ButtonScripts">
       <script>scripts\create_buttons.gml</script>
-      <script>scripts\execute_button.gml</script>
+      <script>scripts\execute_menu_item.gml</script>
       <script>scripts\wipe_buttons.gml</script>
+      <script>scripts\perform_action.gml</script>
     </scripts>
     <scripts name="CombatScripts">
       <script>scripts\draw_projectile.gml</script>
@@ -156,6 +157,7 @@
       <script>scripts\view_zoom.gml</script>
       <script>scripts\check_confirm_key.gml</script>
       <script>scripts\reset_draw_defaults.gml</script>
+      <script>scripts\check_left_click.gml</script>
     </scripts>
     <scripts name="Spells and Abilities">
       <scripts name="Cleric">
@@ -171,7 +173,6 @@
       <scripts name="Control">
         <script>scripts\ability_targeting.gml</script>
         <script>scripts\fill_spell_list.gml</script>
-        <script>scripts\perform_action.gml</script>
       </scripts>
     </scripts>
     <scripts name="GridManagement">

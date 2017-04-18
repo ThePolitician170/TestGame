@@ -63,6 +63,10 @@ if (point_in_rectangle(window_mouse_get_x(),window_mouse_get_y(),x,y,x+width,y+h
 } else {
     hover = false;
 }
+
+if(hover == true &amp;&amp; check_left_click()) {
+    execute_menu_item(oGame.currentActor, id);
+}
 </string>
           </argument>
         </arguments>
